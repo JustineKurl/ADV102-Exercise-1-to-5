@@ -75,7 +75,7 @@ export default function Exercises() {
 
               {index === 5 && (
                 <TouchableOpacity style={styles.button} onPress={() => router.push('/crud')}>
-                  <Text style={styles.buttonText}>Go to CRUD</Text>
+                  <Text style={styles.buttonText}>Try Crud</Text>
                 </TouchableOpacity>
               )}
             </View>

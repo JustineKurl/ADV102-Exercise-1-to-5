@@ -1,5 +1,18 @@
-import { View } from "react-native";
+import { Stack } from "expo-router";
 
-export default function Layout({ children }) {
-  return <View style={{ flex: 1, padding: 20 }}>{children}</View>;
+export default function Layout() {
+  return (
+    <>
+      <Stack>
+        <Stack.Screen
+          name="crud"
+          options={{
+            headerShown: false,
+            title: "crud",
+            headerTitle: "CRUD",
+          }}
+        />
+      </Stack>
+    </>
+  );
 }
