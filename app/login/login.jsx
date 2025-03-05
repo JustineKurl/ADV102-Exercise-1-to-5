@@ -20,7 +20,6 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
-      {/* Back Button - Navigates to Exercises */}
       <TouchableOpacity style={styles.backButton} onPress={() => router.push("/exercises")}>
         <Text style={styles.backText}>←</Text>
       </TouchableOpacity>

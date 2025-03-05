@@ -29,7 +29,7 @@ export default function Quiz({ navigation }) {
       setError("Please enter a number between 10 and 30.");
       return;
     }
-    setError(""); // Clear error if input is valid
+    setError(""); 
     try {
       const response = await fetch(
         `https://opentdb.com/api.php?amount=${num}&type=multiple`
@@ -40,7 +40,7 @@ export default function Quiz({ navigation }) {
       setCurrentQuestion(0);
       setShowScore(false);
       setIsQuizStarted(true);
-      setTimer(10); // Reset timer when starting quiz
+      setTimer(10); 
     } catch (error) {
       console.error("Error fetching questions:", error);
     }
@@ -87,7 +87,7 @@ export default function Quiz({ navigation }) {
             value={numQuestions}
             onChangeText={(text) => {
               setNumQuestions(text);
-              setError(""); // Clear error while typing
+              setError(""); 
             }}
           />
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
