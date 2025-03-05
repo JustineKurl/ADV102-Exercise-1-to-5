@@ -2,7 +2,6 @@ import React, { useReducer, createContext, useContext, useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
 
-// Context Setup
 const CrudContext = createContext();
 
 const initialState = { tasks: [] };
@@ -39,7 +38,6 @@ export default function Crud() {
   return (
     <CrudContext.Provider value={{ state, dispatch }}>
       <View style={styles.container}>
-        {/* Back Button with more spacing */}
         <TouchableOpacity style={styles.backButton} onPress={() => router.push("/exercises")}>
           <Text style={styles.backText}>←</Text>
         </TouchableOpacity>
@@ -78,7 +76,7 @@ export default function Crud() {
   );
 }
 
-// Styles with more spacing between back button and input
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
     color: "#007BFF",
   },
   inputContainer: {
-    marginTop: 80, // Increased spacing from the back button
+    marginTop: 80, 
     flexDirection: "row",
     alignItems: "center",
   },

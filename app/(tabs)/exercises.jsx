@@ -38,7 +38,10 @@ export default function Exercises() {
       title: "Exercise 6", 
       description: `Create a simple CRUD using useContext and useReducer.` 
     },
-    { title: "Exercise 7", description: "Sample description rendered HTML 7" },
+    { 
+      title: "Exercise 7", 
+      description: "Create a simple quiz using the Open Trivia Database API. Users can select the number of questions (min 10, max 30). A timer of 10 seconds will be set for each question, and the final score will be displayed after submission."
+    },
     { title: "Exercise 8", description: "Sample description rendered HTML 8" },
     { title: "Exercise 9", description: "Sample description rendered HTML 9" },
     { title: "Exercise 10", description: "Sample description rendered HTML 10" },
@@ -76,6 +79,12 @@ export default function Exercises() {
               {index === 5 && (
                 <TouchableOpacity style={styles.button} onPress={() => router.push('/crud')}>
                   <Text style={styles.buttonText}>Try Crud</Text>
+                </TouchableOpacity>
+              )}
+
+              {index === 6 && (
+                <TouchableOpacity style={styles.button} onPress={() => router.push('/quiz')}>
+                  <Text style={styles.buttonText}>Try Quiz</Text>
                 </TouchableOpacity>
               )}
             </View>
